@@ -9,4 +9,4 @@ function Button({title = "Get Started"}) {
   )
 }
 
-export default Button
+export default Button;

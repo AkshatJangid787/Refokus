@@ -1,29 +1,24 @@
-import React from 'react'
-import Marque from './Marque'
+import React from 'react';
+import Marque from './Marque';
 
 function Marques() {
+  
   var images = [
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/666359b850995827afaa8db4_633c148b9b819badd7bbcde8_627a8d3e69e23713762e6b34_Vector.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…b819b7aafbbcde1_627a8da607be73fd13e76134_basf.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…c2cf0d8c755473_61957d908c68e7c692fe642e_haufe.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…25dcfcd2e387b2_61957e512832dbf5efe8cdc6_mural.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/6697d485bb37c8fc880cdfad_bcgp-1.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/6697d300a4cce143f24735d3_sevdesk-black.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…7f0/6666ed38989e70633b7658b5_Singularity_logo.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…09197f0/6694f0ff430a1585cff47451_botify-black.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/66979aab7dc661744003a210_logo-black.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…65b2ca264ed8d89bad9b331c_Logo%2520Black%25201.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…6697d8e7a169e0b41018de63_Intesneye-logo-black.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…ddb_64868958b0d3ba04534cc3b3_Silvr_logo_black.png"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…f0/6697d76e013990180ea2be31_jungle-logo-black.svg"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…7f022754664e_626be03929598bb074de4cc1_Remind.webp"],
-    ["https://cdn.prod.website-files.com/664dc8b6bc52b50…3c4467416f9bea_61ee848c05ba9c9caff5fd64_yahoo.svg"]
-  ]
+    "https://cdn.prod.website-files.com/625e8524a4e1135fbab93b78/625e8524a4e113b5c0b93d07_mural.png",
+    "https://cdn.prod.website-files.com/625e8524a4e1135fbab93b78/625e8524a4e1134990b93d28_superai.png",
+    "https://cdn.prod.website-files.com/625e8524a4e1135fbab93b78/625e8524a4e1138207b93d2b_Rocketchat.png",
+    "https://cdn.prod.website-files.com/625e8524a4e1135fbab93b78/625e8524a4e113de2fb93d2c_haufe.png",
+    "https://cdn.prod.website-files.com/625e8524a4e1135fbab93b78/625e8524a4e11332e1b93d26_maxxis.png",
+    "https://cdn.prod.website-files.com/625e8524a4e1135fbab93b78/625e8524a4e1135966b93d24_rentspree.png"
+  ];
+
+
   return (
-    <div>
-        <Marque/>
+    <div className='py-20'>
+      <Marque imagesurls={images} />
+      <Marque imagesurls={images} />
     </div>
-  )
+  );
 }
 
-export default Marques
+export default Marques;
