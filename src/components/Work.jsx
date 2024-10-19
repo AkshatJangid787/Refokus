@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 function Work() {
-  var images = [
+  const [images, setImages] = useState([
     {
       url: "https://cdn.prod.website-files.com/62df9251ae9124976626bcc8/62ebbe78f5b5cf388bac8281_CMS%20Load%20More%20385px-p-800.png",
       top: "50%",
       left: "50%",
-      isActive: true,
+      isActive: false,
     },
     {
       url: "https://cdn.prod.website-files.com/62df9251ae9124976626bcc8/62ebbe8d3c40995c96e54fd7_CMS%20Filter%20385px.png",
@@ -38,7 +39,45 @@ function Work() {
       left: "55%",
       isActive: false,
     },
-  ];
+  ]);
+
+  const { scrollYProgress } = useScroll();
+
+  scrollYProgress.on("change", (data) => {
+    function imagesShow(arr) {
+      setImages((prev) => 
+        prev.map((item, index) =>
+          arr.indexOf(index) === -1
+            ? { ...item, isActive: false }
+            : { ...item, isActive: true }
+        )
+      );
+    }
+
+    switch (Math.floor(data * 100)) {
+      case 0:
+        imagesShow([]);
+        break;
+      case 1:
+        imagesShow([0]);
+        break;
+      case 2:
+        imagesShow([0, 1]);
+        break;
+      case 3:
+        imagesShow([0, 1, 2]);
+        break;
+      case 4:
+        imagesShow([0, 1, 2, 3]);
+        break;
+      case 6:
+        imagesShow([0, 1, 2, 3, 4]);
+        break;
+      case 8:
+        imagesShow([0, 1, 2, 3, 4, 5]);
+        break;
+    }
+  });
 
   return (
     <div className="w-full">
@@ -47,15 +86,17 @@ function Work() {
           work
         </h1>
         <div className="absolute top-0 w-full h-full">
-          {images.map((elem, index) => 
-           elem.isActive && (
-              <img
-                className="absolute w-72 rounded-lg -translate-x-[50%] -translate-y-[50%]"
-                src={elem.url}
-                style={{ top: elem.top, left: elem.left }}
-                alt=""
-              />
-            )
+          {images.map(
+            (elem, index) =>
+              elem.isActive && (
+                <img
+                  key={index}
+                  className="absolute w-72 rounded-lg -translate-x-[50%] -translate-y-[50%]"
+                  src={elem.url}
+                  style={{ top: elem.top, left: elem.left }}
+                  alt=""
+                />
+              )
           )}
         </div>
       </div>
