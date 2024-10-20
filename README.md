@@ -31,11 +31,11 @@ This is a frontend clone project of Refokus, built with modern web technologies.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/refokus-clone.git
+   git clone hhttps://github.com/AkshatJangid787/Refokus.git
 
 2. Navigate to the project directory:
    ```bash
-   cd refokus
+   cd Refokus
 
 3. Install dependencies:
    ```bash
