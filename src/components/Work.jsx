@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 function Work() {
   const [images, setImages] = useState([
@@ -45,7 +45,7 @@ function Work() {
 
   scrollYProgress.on("change", (data) => {
     function imagesShow(arr) {
-      setImages((prev) => 
+      setImages((prev) =>
         prev.map((item, index) =>
           arr.indexOf(index) === -1
             ? { ...item, isActive: false }
@@ -82,16 +82,18 @@ function Work() {
   return (
     <div className="w-full">
       <div className="relative max-w-screen-xl mx-auto text-center">
-        <h1 className="text-[33vw] leading-none font-medium tracking-tight select-none">
+       
+        <h1 className="text-[25vw] md:text-[30vw] lg:text-[31vw] leading-none font-medium tracking-tight select-none">
           work
         </h1>
+
         <div className="absolute top-0 w-full h-full">
           {images.map(
             (elem, index) =>
               elem.isActive && (
                 <img
                   key={index}
-                  className="absolute w-72 rounded-lg -translate-x-[50%] -translate-y-[50%]"
+                  className="absolute w-40 md:w-56 lg:w-72 rounded-lg -translate-x-[50%] -translate-y-[50%]"
                   src={elem.url}
                   style={{ top: elem.top, left: elem.left }}
                   alt=""
