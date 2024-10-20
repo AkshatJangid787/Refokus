@@ -58,22 +58,22 @@ function Work() {
       case 0:
         imagesShow([]);
         break;
-      case 1:
+      case 2:
         imagesShow([0]);
         break;
-      case 2:
+      case 4:
         imagesShow([0, 1]);
         break;
-      case 3:
+      case 6:
         imagesShow([0, 1, 2]);
         break;
-      case 4:
+      case 8:
         imagesShow([0, 1, 2, 3]);
         break;
-      case 6:
+      case 10:
         imagesShow([0, 1, 2, 3, 4]);
         break;
-      case 8:
+      case 12:
         imagesShow([0, 1, 2, 3, 4, 5]);
         break;
     }
