@@ -31,7 +31,7 @@ This is a frontend clone project of Refokus, built with modern web technologies.
 
 1. Clone the repository:
    ```bash
-   git clone hhttps://github.com/AkshatJangid787/Refokus.git
+   git clone https://github.com/AkshatJangid787/Refokus.git
 
 2. Navigate to the project directory:
    ```bash
